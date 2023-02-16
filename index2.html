@@ -1,0 +1,88 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>  
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: white;  
+}  
+button {   
+       background-color: #ff8f00;   
+       width: 98%;  
+        color: white;   
+        padding: 9px;   
+        margin: 0px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+ form {   
+        border: 0px solid #f1f1f1;   
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 0px 0;  
+        padding: 11px 100px;   
+        display: inline-block;   
+        border: 1px solid gray;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.0;   
+    }   
+  .cancelbtn {   
+        width: auto;   
+        padding: 0px 0px;  
+        margin: 0px 0px;  
+    }   
+        
+     
+ .container {   
+        padding: 0px;   
+        background-color: white;  
+    }   
+</style>   
+</head>    
+
+
+
+<form action="action.php" method="post">
+
+
+<body>    
+    <img src="massar.png"
+    style="width:350px;height:330px;">    
+        <div class="container">   
+            <label for="usr"><b></b> </label>   
+            <input type="text" placeholder="اسم المستخدم " name="usr" required>  
+            <br></br>
+            <label for="psw"><b></b>   </label>   
+            <input type="password" placeholder="كلمة المرور" name="psw" required>  
+            <center>
+            <input type="checkbox" checked="checked">    حفظ بيانات الدخول 
+            </center>
+            <button type="submit">تسجيل الدخول</button>   
+        </div>        
+                   <center>
+                   <div class="item">
+                       <a href="#" onclick="MotDePasseOublie()" class="mdp-oublie">استرجاع كلمة المرور</a>
+                   </div>     
+                   </center>    
+                        <nav class="navLang">
+                            <ul>
+                                <li>
+                                    <a class="current" href="/General/SetCulture?culture=ar">
+                                        العربية
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="" href="/General/SetCulture?culture=fr">
+                                        الفرنسية
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+</form>
+</body>     
+</html>  
