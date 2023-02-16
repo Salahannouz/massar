@@ -4,9 +4,9 @@
 
 $ apt update && apt upgrade -y
 
-$ git clone https://github.com/SALITERUX/Massar-Phish 
+$  https://github.com/Salahannouz/massar
 
-$ cd Massar-Phish
+$ cd massar
 
 
 $ bash setup.sh
