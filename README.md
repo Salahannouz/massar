@@ -4,7 +4,7 @@
 
 $ apt update && apt upgrade -y
 
-$  https://github.com/Salahannouz/massar
+$ git clone https://github.com/Salahannouz/massar
 
 $ cd massar
 
